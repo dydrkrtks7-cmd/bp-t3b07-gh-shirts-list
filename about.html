@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공항 셔츠룸 모음 정보 | 에디토리얼 럭셔리 가이드</title>
+    <meta name="bpaas-design-system" content="editorial-apple">
+    <meta name="bpaas-design-theme" content="kr-noir-gold">
+    <meta name="description" content="공항 셔츠룸 모음의 모든 정보를 한곳에. 인천공항 셔츠룸 이용 꿀팁, 가격대, 위치까지 친근하게 소개합니다. 전화 010-6279-0862">
+    <meta name="keywords" content="공항 셔츠룸 모음, 공항 셔츠룸 정보, 인천공항 셔츠룸, 셔츠룸 추천, 고급 셔츠룸">
+    <link rel="canonical" href="https://t3b07-gh-shirts-list.vercel.app/info">
+    <meta property="og:title" content="공항 셔츠룸 모음 정보 | 에디토리얼 럭셔리 가이드">
+    <meta property="og:description" content="공항 셔츠룸 모음의 모든 정보를 한곳에. 인천공항 셔츠룸 이용 꿀팁, 가격대, 위치까지 친근하게 소개합니다.">
+    <meta property="og:type" content="website">
+    <style>
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: #e0d5c1;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        a {
+            color: #d4af37;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #f5e6b8;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        header {
+            background: linear-gradient(180deg, #141414 0%, rgba(10, 10, 10, 0.95) 100%);
+            border-bottom: 1px solid #2a2a2a;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 16px 0;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 200;
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            color: #d4af37;
+            text-shadow: 0 0 20px rgba(212, 175, 55, 0.2);
+        }
+        .logo span {
+            font-weight: 600;
+            color: #f5e6b8;
+        }
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            list-style: none;
+        }
+        .nav-links a {
+            color: #a09080;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        .nav-links a:hover {
+            color: #d4af37;
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: #d4af37;
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 5px;
+        }
+        .hamburger span {
+            width: 28px;
+            height: 2px;
+            background: #d4af37;
+            transition: all 0.3s ease;
+        }
+        .hero {
+            min-height: 70vh;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 50%, #0d0d0d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 50%, rgba(212, 175, 55, 0.03) 0%, transparent 60%),
+                        radial-gradient(circle at 70% 30%, rgba(245, 230, 184, 0.02) 0%, transparent 50%);
+            animation: subtleShift 20s ease-in-out infinite;
+        }
+        @keyframes subtleShift {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(2%, 1%); }
+        }
+        .hero-overlay {
+            position: relative;
+            z-index: 1;
+            padding: 60px 24px;
+        }
+        .hero-overlay h1 {
+            font-size: 3.5rem;
+            font-weight: 200;
+            letter-spacing: 8px;
+            color: #f5e6b8;
+            margin-bottom: 24px;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.1);
+        }
+        .hero-overlay p {
+            font-size: 1.1rem;
+            color: #a09080;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            letter-spacing: 1px;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: rgba(10, 10, 10, 0.98);
+                flex-direction: column;
+                padding: 24px;
+                gap: 16px;
+                border-bottom: 1px solid #2a2a2a;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .hero-overlay h1 {
+                font-size: 2.2rem;
+                letter-spacing: 4px;
+            }
+            .hero-overlay p {
+                font-size: 0.95rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo">공항<span>셔츠룸</span></div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="/">홈</a></li>
+                    <li><a href="/list">리스트</a></li>
+                    <li><a href="/info">정보</a></li>
+                    <li><a href="/contact">문의</a></li>
+                </ul>
+                <div class="hamburger" onclick="this.classList.toggle('active'); document.querySelector('.nav-links').classList.toggle('active');">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1>공항 셔츠룸 모음<br>정보 가이드</h1>
+            <p>형, 진짜 꿀정보만 모았어. 인천공항 셔츠룸 이용 전에 꼭 알아야 할 모든 것.</p>
+        </div>
+    </section>
+
+    <main class="container" style="padding: 80px 24px;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <h2 style="font-weight: 200; letter-spacing: 4px; color: #d4af37; margin-bottom: 40px; font-size: 2rem;">공항 셔츠룸, 뭔지 알려줄게</h2>
+            
+            <p style="margin-bottom: 24px; color: #c0b5a0; font-size: 1.05rem;">야, 공항 셔츠룸 모음이라고 하니까 뭔가 거창해 보이지? 근데 막상 가보면 생각보다 편하고, 오히려 고급스러워서 깜짝 놀라게 돼. 내가 인천공항 근처에서 몇 군데 돌아다녀 본 경험으로 말하는 건데, 진짜 괜찮은 곳들이 꽤 있어.</p>
+
+            <p style="margin-bottom: 24px; color: #c0b5a0; font-size: 1.05rem;">공항 셔츠룸 모음의 가장 큰 장점은 뭘까? 일단 위치가 좋아. 인천공항에서 차로 10~15분이면 도착하는 곳들이 대부분이라 비행기 시간 맞추기도 편해. 그리고 분위기가 진짜 클래스가 달라. 일반 셔츠룸이랑은 비교도 안 되는 수준이라고 보면 돼.</p>
+
+            <p style="margin-bottom: 40px; color: #c0b5a0; font-size: 1.05rem;">가격대는? 솔직히 말하면 저렴한 편은 아니야. 하지만 그만큼 서비스와 시설이 완벽해서 '아, 이 돈 내고 이런 경험 하는구나' 싶을 거야. 형이 처음 갔을 때도 '이게 진짜 셔츠룸이야?' 싶을 정도로 퀄리티가 좋았어.</p>
+
+            <div style="background: #141414; padding: 40px; border-left: 3px solid #d4af37; margin-bottom: 40px;">
+                <h3 style="color: #f5e6b8; font-weight: 300; letter-spacing: 2px; margin-bottom: 20px;">✨ 공항 셔츠룸 모음 이용 꿀팁</h3>
+                <ul style="list-style: none; color: #c0b5a0;">
+                    <li style="margin-bottom: 12px;">• 예약은 꼭 미리 해야 해. 특히 주말에는 자리 없어</li>
+                    <li style="margin-bottom: 12px;">• 첫 방문이면 VIP 코스 추천. 진짜 제대로 된 경험할 수 있어</li>
+                    <li style="margin-bottom: 12px;">• 공항에서 픽업 서비스 제공하는 곳도 있으니 확인해 봐</li>
+                    <li style="margin-bottom: 12px;">• 음료는 시그니처 칵테일 강추. 분위기랑 잘 어울려</li>
+                    <li style="margin-bottom: 12px;">• 복장은 깔끔하게. 재킷 하나 걸치면 완벽해</li>
+                </ul>
+            </div>
+
+            <h2 style="font-weight: 200; letter-spacing: 4px; color: #d4af37; margin-bottom: 40px; font-size: 2rem;">자주 묻는 질문</h2>
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #d4af37; font-weight: 300; margin-bottom: 10px;">Q: 공항 셔츠룸 모음은 처음인데 괜찮을까?</h3>
+                <p style="color: #a09080;">당연하지! 오히려 처음 가는 사람들이 더 만족도가 높아. 분위기도 좋고 직원들도 친절하게 안내해 주니까 부담 없이 즐기면 돼.</p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #d4af37; font-weight: 300; margin-bottom: 10px;">Q: 가격대가 어떻게 돼?</h3>
+                <p style="color: #a09080;">보통 20~40만원대가 일반적이야. 코스랑 시간에 따라 달라지니까 예약할 때 물어보는 게 좋아.</p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #d4af37; font-weight: 300; margin-bottom: 10px;">Q: 인천공항에서 어떻게 가?</h3>
+                <p style="color: #a09080;">택시 타면 15분 안에 도착해. 아니면 픽업 서비스 이용하는 것도 방법이야. 대부분의 공항 셔츠룸 모음에서 무료로 해줘.</p>
+            </div>
+
+            <div style="margin-bottom: 30px;">
+                <h3 style="color: #d4af37; font-weight: 300; margin-bottom: 10px;">Q: 혼자 가도 돼?</h3>
+                <p style="color: #a09080;">물론이지! 오히려 혼자 오는 사람들 많아. 바에서 한잔하면서 분위기 즐기다 가는 경우도 많고.</p>
+            </div>
+
+            <p style="margin-top: 60px; color: #a09080; font-size: 0.95rem; text-align: center;">더 궁금한 게 있으면 전화해, 형. 010-6279-0862</p>
+        </div>
+    </main>
+
+    <footer style="background: #0a0a0a; border-top: 1px solid #2a2a2a; padding: 40px 24px; text-align: center;">
+        <p style="color: #666; font-size: 0.85rem; letter-spacing: 2px;">© 2024 공항 셔츠룸 모음 · All rights reserved</p>
+        <p style="color: #444; font-size: 0.75rem; margin-top: 12px;">에디토리얼 럭셔리 가이드 · 전화 010-6279-0862</p>
+    </footer>
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
